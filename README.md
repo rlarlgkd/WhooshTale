@@ -15,8 +15,7 @@ When a user click the wand icon at the middle.
 ## Database
 Here's the potential database for this app
 <br/>
-https://user-images.githubusercontent.com/33505398/222876739-5e2e50fd-d846-456f-87b4-b1e8ffa8de72.svg
-
+![WhooshTaleDBDiagram drawio](https://user-images.githubusercontent.com/33505398/222876739-5e2e50fd-d846-456f-87b4-b1e8ffa8de72.svg)
 ### User
 * user_id: Unique id for user
 * name : name of the user
