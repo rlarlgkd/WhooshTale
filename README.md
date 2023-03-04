@@ -38,22 +38,31 @@ with the given "user_id".
 * content : Each story is consist of up to 500 words
 * date : Released date of the Story. If the released date is equal to current date,
 the story is the "Story of the Day"
+* fav_count : Represent how many people likes the story. The default value is 0.
 ### Topics
-Each story have 1 or more topic. Topic element is consists of data type of 
+Each story has 1 or more topic. Topic element is consists of data type of 
 "TOPIC"
 
 ### TOPIC
 TOPIC is enumeration class that represents topic of stories.
 
 ## API
-
-
+Currently, I am using com.example.whooshtale -> data -> Story.kt file to store
+dummy data and test the app.
+<br/>
+Plan is to put api file in api folder, which is currently empty.
+<br/>
+Here is the potential APIs for this app
+```sh
+// shows the 
+"${BASE_API_URL}?subscription_date=$subscription_date"
+```
 ## ISSUES
 The way story is generated is by combining one lesson and one topic.
 <br/>
 some possible options of choosing tag for each story:
 1. Simply pick the topic parameter that was used to generate a story.
-* issue1 : there are 50 kinds of topic. This could increase. Therefore, it will be harder for users to scroll through tags? 
-* issue2 : there is only one topic parameter for one story. This means each story can have one tag and one tag only.
-2. Fine-tune the OpenAI API so that chatGPT will analyze the story and then provide up to 3~5 topic out of 10~15 topic list.
+   &nbsp; * issue1 : there are 50 kinds of topic. This could increase. Therefore, it will be harder for users to scroll through tags? 
+** issue2 : there is only one topic parameter for one story. This means each story can have one tag and one tag only.
+2. Fine-tune the OpenAI API so that chatGPT will analyze the story and then provide up to 5 topic out of 15 topic list.
 * issue1 : It is harder than way 1
