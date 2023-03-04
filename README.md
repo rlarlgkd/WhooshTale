@@ -14,7 +14,8 @@ When a user click the wand icon at the middle.
 
 ## Database
 Here's the potential database for this app
-<<image>>
+<br/>
+https://user-images.githubusercontent.com/33505398/222876739-5e2e50fd-d846-456f-87b4-b1e8ffa8de72.svg
 
 ### User
 * user_id: Unique id for user
@@ -52,17 +53,13 @@ dummy data and test the app.
 <br/>
 Plan is to put api file in api folder, which is currently empty.
 <br/>
-Here is the potential APIs for this app
-```sh
-// shows the 
-"${BASE_API_URL}?subscription_date=$subscription_date"
-```
+
 ## ISSUES
 The way story is generated is by combining one lesson and one topic.
 <br/>
 some possible options of choosing tag for each story:
 1. Simply pick the topic parameter that was used to generate a story.
-   &nbsp; * issue1 : there are 50 kinds of topic. This could increase. Therefore, it will be harder for users to scroll through tags? 
-** issue2 : there is only one topic parameter for one story. This means each story can have one tag and one tag only.
+* issue1 : there are 50 kinds of topic. This could increase. Therefore, it will be harder for users to scroll through tags? 
+* issue2 : there is only one topic parameter for one story. This means each story can have one tag and one tag only.
 2. Fine-tune the OpenAI API so that chatGPT will analyze the story and then provide up to 5 topic out of 15 topic list.
 * issue1 : It is harder than way 1
