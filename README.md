@@ -52,6 +52,14 @@ dummy data and test the app.
 <br/>
 Plan is to put api file in api folder, which is currently empty.
 <br/>
+Here is a list of potential APIs this app needs
+1. List of all the stories ever since the current user's subscription date.
+2. List of all the stories the current user clicked as "Favorites"
+3. List of all the stories with the tags that the current user choose
+4. List of all the stories with the title that the current user searched
+5. Top 20 stories with most "fav_count"
+6. current user's "daily_story" value in Boolean
+7. Today's Story
 
 ## ISSUES
 The way story is generated is by combining one lesson and one topic.
