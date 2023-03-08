@@ -16,6 +16,7 @@ import com.example.whooshtale.data.Story
 import com.example.whooshtale.data.Topic
 import com.example.whooshtale.data.stories
 import com.example.whooshtale.data.topicList
+import com.example.whooshtale.navigation.Screens
 import com.example.whooshtale.ui.common.CustomTopAppBar
 import com.example.whooshtale.ui.common.StoryItemCard
 import com.example.whooshtale.ui.common.TagCard
@@ -49,6 +50,7 @@ fun LibraryScreen(navController: NavController){
                         image = story.imageResourceId,
                         tag = story.tag
                     ) {
+                        navController.navigate(Screens.StoryDetailScreen.withBookId(story.StoryId.toString()))
 
                     }
                 }

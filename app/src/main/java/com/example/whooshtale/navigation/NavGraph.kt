@@ -10,9 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 import com.example.whooshtale.others.NetworkObserver
 import com.example.whooshtale.ui.screens.favorites.composables.FavoritesScreen
 import com.example.whooshtale.ui.screens.library.composables.LibraryScreen
+import com.example.whooshtale.ui.screens.library.composables.StoryDetailScreen
 import com.example.whooshtale.ui.screens.settings.composables.SettingsScreen
 import com.example.whooshtale.ui.screens.whoosh.composables.WhooshScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
@@ -56,7 +59,18 @@ fun NavGraph(
         ){
             SettingsScreen(navController = navController)
         }
-
+        composable(
+            route = Screens.StoryDetailScreen.route,
+            arguments = listOf(
+                navArgument(STORY_ID_ARG_KEY) {
+                    type = NavType.StringType
+                },
+            )
+        ){
+                backStackEntry ->
+            val storyId = backStackEntry.arguments!!.getString(STORY_ID_ARG_KEY)!!
+            StoryDetailScreen(storyId, navController, networkStatus)
+        }
 
     }
 }

@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.whooshtale.R
 import com.example.whooshtale.others.NetworkObserver
+import com.example.whooshtale.ui.common.WavesAnimation
 import com.example.whooshtale.ui.theme.figeronaFont
 
 @Composable
@@ -37,14 +38,15 @@ fun WhooshScreen(navController: NavController, networkStatus: NetworkObserver.St
             contentAlignment = Alignment.Center
         ) {
 
-            Image(
-                modifier = Modifier
-                    .size(100.dp)
-                    .clip(RoundedCornerShape(5)),
-                contentScale = ContentScale.FillWidth,
-                painter = painterResource(R.drawable.ic_wand),
-                contentDescription = null
-            )
+//            Image(
+//                modifier = Modifier
+//                    .size(100.dp)
+//                    .clip(RoundedCornerShape(5)),
+//                contentScale = ContentScale.FillWidth,
+//                painter = painterResource(R.drawable.ic_wand),
+//                contentDescription = null
+//            )
+            WavesAnimation()
         }
         Text(
             text = stringResource(R.string.flick_wand),
